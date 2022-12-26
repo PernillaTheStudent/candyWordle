@@ -1,8 +1,13 @@
 // Five letter nouns
 const WORDLES = [
-    "Adult", "Apple", "Block", "Blood", "Chair", "Dance", "Earth", "Field", "Group", "Horse",
-    "Image", "Judge", "Light", "Match", "Night", "Owner", "Party", "Radio",
-    "Scene", "Table", "Value", "World", "Youth"
+    "Adult", "Apple", "Agent", "Award", "Beach", "Birth", "Block", "Board", "Chain", "Chair", 
+    "Chest", "Cross", "Dance", "Draft", "Drama", "Earth", "Entry", "Field", "Floor", "Frame", 
+    "Green", "Group", "Heart", "Horse", "Hotel", "Image", "Index", "Judge", "Level", "Light", 
+    "Match", "Money", "Music", "Night", "Novel", "Order", "Owner", "Paper", "Party", "Peace", 
+    "Plane", "Plant", "Price", "Radio", "Right", "River", "Round", "Scale", "Scene", "Sheep", 
+    "Shirt", "Sight", "Smile", "Sound", "Speed", "Table", "Taste", "Total", "Tower", "Train", 
+    "Trust", "Truth", "Uncle", "Unity", "Video", "Value", "Visit", "White", "Woman", "World", 
+    "Youth"
 ]
 
 // GAME STATE VARIABLES
