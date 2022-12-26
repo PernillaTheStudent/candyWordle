@@ -1,0 +1,114 @@
+form {
+    border-radius: var(--indent-2x);
+    font-family: var(--font-family);
+    padding: var(--indent-2x) 0;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    appearance: none;
+    background: var(--background-color-primary);
+    border: none;
+    border-radius: var(--indent-2x);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    color: var(--font-color-primary);
+    font-size: var(--font-size-paragraph);
+    height: auto;
+    outline: 0;
+    padding: var(--indent-4x);
+    margin: var(--indent-2x) 0 0;
+    width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: var(--indent-2x) var(--indent-3x);
+}
+select {
+    border-radius: 2px;
+    height: 32px;
+    padding: 6px;
+}
+
+button {
+    appearance: none;
+    color: var(--accent-color);
+    background: var(--accent-color-play-d);
+    background: none;
+    border-radius: var(--indent-2x);
+    border: none;
+    flex: 1 1;
+    font-size: var(--link-font-size);
+    font-weight: var(--font-paragraph-medium);
+    letter-spacing: var(--link-letter-spacing);
+    margin-bottom: var(--indent-3x);
+    padding: var(--indent-4x) var(--indent-6x);
+    text-align: center;
+    width: 100%;
+}
+button.button.secondary {
+    background-color: var(--accent-color-play-d);
+    flex-grow: 2;
+}
+/* button.button.third {
+    flex-shrink: 2;
+} */
+button:hover {
+    background-color: var(--background-color-secondary);
+    color: var(--accent-color);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: var(--indent-10x);
+}
+
+legend {
+    font-size: var(--font-size-paragraph);
+    font-weight: var(--font-paragraph-medium);
+    margin-bottom: var(--indent-3x);
+}
+
+label {
+    display: block;
+    font-size: var(--font-size-paragraph);
+    line-height: 140%;
+    margin-top: var(--indent-4x);
+}
+
+label.age {
+    display: inline-block;
+    margin: 0;
+    margin: var(--indent-2x) 0 0;
+}
+label.news {
+    display: inline;
+    margin-top: var(--indent-5x);
+}
+textarea {
+    margin-bottom: var(--indent-4x);
+}
+
+.number {
+    background-color: var(--accent-color-play-b);
+    border-radius: 100%;
+    color: var(--font-color-secondary);
+    display: inline-block;
+    font-size: var(--font-size-paragraph);
+    height: var(--indent-10x);
+    line-height: var(--indent-10x);
+    margin-right: var(--indent-2x);
+    text-align: center;
+    width: var(--indent-10x);
+}

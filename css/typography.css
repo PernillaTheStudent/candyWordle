@@ -1,0 +1,10 @@
+/* Merriweather  */
+@font-face {
+    font-family: Merriweather;
+    font-weight: 700; 
+    src: url('../fonts/merriweather/merriweather-bold-webfont.woff') format('woff'),
+         url('../fonts/merriweather/merriweather-bold-webfont.woff2') format('woff2');
+}
+
+
+

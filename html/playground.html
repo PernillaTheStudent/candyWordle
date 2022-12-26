@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Candy Wordle Game</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/typography.css" type="text/css">
+    <link rel="stylesheet" href="../css/wordleCandy.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <script src="../js/wordleCandy.js" defer></script>
+</head>
+
+<body>
+    <div id="document-container">
+        <header>
+            <a href="index.html"><img id="logo" src="../images/Logo.png" alt="Logo Candy Game"
+                    title="Logo Candy Game" /></a>
+            <nav>
+                <div class="top-navigation align-items">
+                    <a class="button primary" href="#" id="playground">Playground<img class="active-icon"
+                            src="../images/active.png" width="100%" alt="active" title="active"></a>
+                    <div class="top-nav-right">
+                        <a class="hamburger-menu" href="#">
+                            <img id="hamburger-menu-icon" src="../images/hamburger-menu.png" width="100%"
+                                alt="Mobile menu" title="Mobile menu">
+                        </a>
+                        <div class="mobile-menu">
+                            <a href="index.html">Home</a>
+                            <a href="#" class="active">Playground</a>
+                            <a href="signin.html">Sign in</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                        <a class="button secondary" href="signin.html" id="sign-in">Sign in</a>
+                        <a href="contact.html" id="contact">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="banner">
+            <div class="banner-content">
+                <h1>Candy<span>Wordle</span></h1>
+            </div>
+        </div>
+
+        <main id="content">
+            <div class="content-wrapper">
+                <article class="row-content variation-one">
+                    <!-- <p>Play guide below.</p> -->
+                    <section class="board">
+                        <h2>Guess the word</h2>
+                        <div class="container">
+                            <div class="squaresGrid">
+                                <!-- class="wrong right almost -->
+                                <div class="square red">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                                <div class="square">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="keyboard">
+                        <div class="keyboard-container">
+                            <div class="keys">
+                                <button class="key" id="q">q</button>
+                                <button class="key" id="w">w</button>
+                                <button class="key" id="e">e</button>
+                                <button class="key" id="r">r</button>
+                                <button class="key" id="t">t</button>
+                                <button class="key" id="y">y</button>
+                                <button class="key" id="u">u</button>
+                                <button class="key" id="i">i</button>
+                                <button class="key" id="o">o</button>
+                                <button class="key" id="p">p</button>
+                            </div>
+                            <div class="keys">
+                                <button class="key" id="a">a</button>
+                                <button class="key" id="s">s</button>
+                                <button class="key" id="d">d</button>
+                                <button class="key" id="f">f</button>
+                                <button class="key" id="g">g</button>
+                                <button class="key" id="h">h</button>
+                                <button class="key" id="j">j</button>
+                                <button class="key" id="k">k</button>
+                                <button class="key" id="l">l</button>
+                            </div>
+                            <div class="keys">
+                                <button class="key" id="z">z</button>
+                                <button class="key" id="x">x</button>
+                                <button class="key" id="c">c</button>
+                                <button class="key" id="v">v</button>
+                                <button class="key" id="b">b</button>
+                                <button class="key" id="n">n</button>
+                                <button class="key" id="m">m</button>
+                                <button class="key" id="back">back</button>
+                            </div>
+                            <div class="keys">
+                                <div class="enter">
+                                    <button class="submit key">enter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="keys">
+                            <div class="play-again hidden">
+                                <button class="submit key">play again</button>
+                            </div>
+                        </div>
+                        <div class="show-result">
+                            <div class="container">
+                                <p><a class="close">❎</a></p>
+                                <div class="result-content">
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+            <div class="aside">
+                <h3>How to play</h3>
+                <p>Guess a five letter word and click enter.</p>
+                <p>If you guess "HELLO" but the correct word is <b>A P P L E</b>, it will look like this:</p>
+                <div class="howTokeys" style="margin-bottom: 3rem">
+                    <div class="howToKey wrong">H</div>
+                    <div class="howToKey almost"><span class="inside">E</span></div>
+                    <div class="howToKey almost"><span class="inside">L</span></div>
+                    <div class="howToKey right"><span class="inside">L</span></div>
+                    <div class="howToKey wrong"><span class="inside">O</span></div>
+                </div>
+                <div class="howTokeys" style="margin: 0 1rem 1rem 0; float: left">
+                    <div class="howToKey wrong">H</div> 
+                </div>
+                <p style="padding-top: 0.5rem;">Letter doesn't exist in the word.</p>
+                <div class="howTokeys" style="margin: 0 1rem 1rem 0; float: left">
+                    <div class="howToKey almost">E</div> 
+                </div>
+                <p style="padding-top: 0.5rem;">Letter in wrong position.</p>
+                <div class="howTokeys" style="margin: 0 1rem 1rem 0; float: left">
+                    <div class="howToKey right">L</div> 
+                </div>
+                <p style="padding-top: 0.5rem;">Letter in right position.</p>
+            </div>
+        </main>
+        <footer>
+            <div class="column first">
+                <a href="index.html">Home</a>
+                <a href="#">Playground</a>
+                <a href="signin.html">Sign in</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="column second">
+                <a href="#">Help</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
