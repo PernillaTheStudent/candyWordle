@@ -183,7 +183,7 @@ button.submit {
     background-color: var(--background-color-light-c);
     font-size: 15px;
     position: absolute;
-    top: 50%;
+    top: 62%;
     left: 50%;
     visibility: hidden;
     overflow: hidden;
@@ -211,7 +211,7 @@ button.submit {
 }
 
 .show-result .container {
-    padding: 8rem;
+    padding: 4rem;
     text-align: center;
 }
 

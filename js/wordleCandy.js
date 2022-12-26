@@ -22,7 +22,7 @@ const allKeys = document.querySelectorAll(".key")
 const allSquares = document.querySelectorAll(".square")
 
 function initializeGame() {
-    maximumNumberOfTurns = 6
+    maximumNumberOfTurns = 2
     // TODO: call function with document.createElement to fill with squares
     userGuesses = []
     characters = []
@@ -43,6 +43,9 @@ function clearSquares() {
         square.classList.remove("right")
         square.classList.remove("wrong")
         square.classList.remove("almost")
+    })
+    allKeys.forEach(function (key) {
+        key.classList.remove("wrong")
     })
 }
 
@@ -89,7 +92,7 @@ function userSelection(userInput) {
                         square.classList.add("wrong")
                         //if (!keyElement.classList.contains("wrong")) keyElement.classList.add("wrong")
                     }
-                }, index * 100)
+                }, index * 150)
             })(index);
             index++
         }
