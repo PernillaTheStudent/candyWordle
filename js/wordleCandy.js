@@ -28,8 +28,8 @@ function initializeGame() {
     characters = []
     clearSquares()
 
-    // computerWord = getComputerWord().toUpperCase()
-    computerWord = "apple".toUpperCase()
+    computerWord = getComputerWord().toUpperCase()
+    // computerWord = "apple".toUpperCase()
     console.log("candy wordle", computerWord)
 }
 
@@ -92,7 +92,7 @@ function userSelection(userInput) {
                         square.classList.add("wrong")
                         //if (!keyElement.classList.contains("wrong")) keyElement.classList.add("wrong")
                     }
-                }, index * 150)
+                }, index * 80)
             })(index);
             index++
         }
