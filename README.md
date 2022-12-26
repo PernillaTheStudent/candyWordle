@@ -1,2 +1,2 @@
-# projectOne
-Third Assignment, Front-End development
+# projectThree
+Candy Wordle Game - Third Assignment, Front-End development
