@@ -1,12 +1,12 @@
 // Five letter nouns
 const WORDLES = [
-    "Adult", "Apple", "Agent", "Award", "Beach", "Birth", "Block", "Board", "Chain", "Chair", 
-    "Chest", "Cross", "Dance", "Draft", "Drama", "Earth", "Entry", "Field", "Floor", "Frame", 
-    "Green", "Group", "Heart", "Horse", "Hotel", "Image", "Index", "Judge", "Level", "Light", 
-    "Match", "Money", "Music", "Night", "Novel", "Order", "Owner", "Paper", "Party", "Peace", 
-    "Plane", "Plant", "Price", "Radio", "Right", "River", "Round", "Scale", "Scene", "Sheep", 
-    "Shirt", "Sight", "Smile", "Sound", "Speed", "Table", "Taste", "Total", "Tower", "Train", 
-    "Trust", "Truth", "Uncle", "Unity", "Video", "Value", "Visit", "White", "Woman", "World", 
+    "Adult", "Apple", "Agent", "Award", "Beach", "Birth", "Block", "Board", "Chain", "Chair",
+    "Chest", "Cross", "Dance", "Draft", "Drama", "Earth", "Entry", "Field", "Floor", "Frame",
+    "Green", "Group", "Heart", "Horse", "Hotel", "Image", "Index", "Judge", "Level", "Light",
+    "Match", "Money", "Music", "Night", "Novel", "Order", "Owner", "Paper", "Party", "Peace",
+    "Plane", "Plant", "Price", "Radio", "Right", "River", "Round", "Scale", "Scene", "Sheep",
+    "Shirt", "Sight", "Smile", "Sound", "Speed", "Table", "Taste", "Total", "Tower", "Train",
+    "Trust", "Truth", "Uncle", "Unity", "Video", "Value", "Visit", "White", "Woman", "World",
     "Youth"
 ]
 
@@ -15,6 +15,8 @@ let userGuesses
 let computerWord
 let maximumNumberOfTurns      // add how many turns a player can guess
 let characters
+
+const sessionStorageKey = "candy-wordle-state"
 
 // PROMPT RESULT OPTIONS
 const USER_HAS_WON = "user-has-won"
@@ -71,6 +73,7 @@ function userSelection(userInput) {
                 if (!keyElement.classList.contains("wrong")) keyElement.classList.add("wrong")
             }
             ((i) => {
+                // TODO: placeringar: kolla fram och tillbaka
                 setTimeout(() => {
                     let square = allSquares[(userGuesses.length - 1) * 5 + i]
                     // if the letter exist in computerWord AND
@@ -101,8 +104,6 @@ function userSelection(userInput) {
             })(index);
             index++
         }
-        console.log("Right: ", lastLettersRightPosition)
-        console.log("Wrong:", lastLettersWrongPosition)
         if (userHasWon) {
             return USER_HAS_WON
         }
@@ -190,6 +191,12 @@ allKeys.forEach(function (key) {
         }
 
         if (result === USER_HAS_WON) {
+            const stringState = sessionStorage.getItem(sessionStorageKey);
+            const state = stringState ? JSON.parse(stringState) : { wins: 0, losses: 0 }
+            state.wins++;
+            console.log("string state", stringState, state)
+            sessionStorage.setItem(sessionStorageKey, JSON.stringify(state));
+
             setTimeout(() => {
                 divShowResult.classList.add("active")
                 keyboard.classList.add("hidden")
@@ -201,11 +208,19 @@ allKeys.forEach(function (key) {
                 <h3>You won 🏅</h3>
                 <p>Correct word was: '<strong>${computerWord.toUpperCase()}</strong>'.
                 <p>Your guesses: <br>
-                ${userGuesses.join(" –– ")}</p>`
-            }, 2000)
+                ${userGuesses.join(" –– ")}</p>
+                <h3>Game history</h3>
+                <p>Wins: ${state.wins}, Losses: ${state.losses}</p>`
+            }, 1200)
             return
         }
         if (result === OUT_OF_GUESSES) {
+            const stringState = sessionStorage.getItem(sessionStorageKey);
+            const state = stringState ? JSON.parse(stringState) : { wins: 0, losses: 0 }
+            state.losses++;
+            console.log("string state", stringState, state)
+            sessionStorage.setItem(sessionStorageKey, JSON.stringify(state));
+
             setTimeout(() => {
                 console.log("result === Out of guesses")
                 divShowResult.classList.add("active")
@@ -219,7 +234,9 @@ allKeys.forEach(function (key) {
                                   <h3>You are out of guesses.</h3>
                                   <p>Correct word was: '<strong>${computerWord.toUpperCase()}</strong>'.
                                   <p>Your guesses: <br>
-                                  ${userGuesses.join(" –– ")}</p>`
+                                  ${userGuesses.join(" –– ")}</p>
+                                  <h3>Game history</h3>
+                                  <p>Wins: ${state.wins}, Losses: ${state.losses}</p>`
                 // let infoText = document.querySelector(".result-content")
                 // infoText.innerHTML = ""
                 // let header = document.createElement("h2")
@@ -228,7 +245,7 @@ allKeys.forEach(function (key) {
                 // info.textContent = `Correct word was '${computerWord.toUpperCase()}'`
                 // infoText.appendChild(header)
                 // infoText.appendChild(info)
-            }, 2000)
+            }, 1200)
             return
         }
     })
