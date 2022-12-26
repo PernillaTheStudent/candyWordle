@@ -22,7 +22,7 @@ const allKeys = document.querySelectorAll(".key")
 const allSquares = document.querySelectorAll(".square")
 
 function initializeGame() {
-    maximumNumberOfTurns = 2
+    maximumNumberOfTurns = 6
     // TODO: call function with document.createElement to fill with squares
     userGuesses = []
     characters = []
