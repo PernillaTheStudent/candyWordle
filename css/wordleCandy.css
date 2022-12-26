@@ -183,7 +183,7 @@ button.submit {
     background-color: var(--background-color-light-c);
     font-size: 15px;
     position: absolute;
-    top: 82%;
+    top: 102%;
     left: 50%;
     visibility: hidden;
     overflow: hidden;
